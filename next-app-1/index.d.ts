@@ -1,2 +1,2 @@
 declare module 'next2/remote';
-declare module 'react1/Button';
+declare module 'react1/Timer';

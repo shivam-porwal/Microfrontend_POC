@@ -1,3 +1,5 @@
+import React from 'react';
+
 const Remote = () => {
     // const [count, setCount] = useState(0);
     // const add = () => {

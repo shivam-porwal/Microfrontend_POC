@@ -6,8 +6,8 @@ import dynamic from "next/dynamic";
 
 const inter = Inter({ subsets: ['latin'] })
 const Remote = dynamic(() => import('next2/remote'));
-const React1_Button = dynamic(
-    () => import('react1/Button'), {
+const React1_Timer = dynamic(
+    () => import('react1/Timer'), {
         ssr: false
     }
 );
@@ -21,7 +21,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Remote/>
-        <React1_Button />
+        <React1_Timer />
     </>
   )
 }

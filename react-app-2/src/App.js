@@ -1,6 +1,6 @@
 import React from 'react';
-const React1_Button = React.lazy(
-    () => import('react1/Button')
+const React1_Timer = React.lazy(
+    () => import('react1/Timer')
 );
 const Next2_Remote = React.lazy(() => import('next2/remote'));
 
@@ -12,7 +12,7 @@ function App() {
             </h1>
             <div>
                 <React.Suspense fallback='Loading React 1'>
-                    <React1_Button />
+                    <React1_Timer />
                 </React.Suspense>
             </div>
              <div>

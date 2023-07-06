@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
+const deps = require('./package.json').dependencies;
 module.exports = {
     mode: 'development',
     devServer: {
@@ -46,6 +47,7 @@ module.exports = {
                         'react1@http://localhost:3002/remoteEntry.js',
                     'next2': 'next2@http://localhost:3001/_next/static/chunks/remoteEntry.js',
                 },
+                shared: deps
             }
         ),
         new HtmlWebpackPlugin({

@@ -12,9 +12,6 @@ const nextConfig = {
                 exposes: {
                     './remote': '@mf2/components/remote/remote.tsx',
                 },
-                extraOptions: {
-                    skipSharingNextInternals: true
-                }
             }),
         );
         return config;

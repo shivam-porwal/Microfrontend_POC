@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
+const deps = require('./package.json').dependencies;
 module.exports = {
     mode: 'development',
     devServer: {
@@ -42,9 +43,10 @@ module.exports = {
                 filename:
                     'remoteEntry.js',
                 exposes: {
-                    './Button':
-                        './src/components/Button',
+                    './Timer':
+                        './src/components/Timer',
                 },
+                shared: deps
             }
         ),
         new HtmlWebpackPlugin({
